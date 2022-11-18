@@ -1,0 +1,111 @@
+= Workshop Asciidoctor & RevealJS: Agenda
+Benjamin Schmid
+:lang: en
+:!toc: macro
+:toclevels: 1
+:toc:
+//:numbered:
+:icons: font
+:chapter-label:
+:pdf-theme: ../theme/pdfstyle.yml
+:pdf-fontsdir: ../theme
+
+
+== General
+
+=== Framework
+[cols=">1h,4a"]
+|===
+| Implementation | remote workshop, e.g. with Zoom.us or Microsoft Teams
+| Date | on two evenings during the week (17:00-20:00). 
+| group of participants | approx. 5 participants. 
+| Equipment | each own computer with internet access, Fedora 37 operating system and admin rights for software installation, 
+ideally each own headset.
+| Language | English
+| Supporting materials | Template project and instructor presentation/notes.
+|===
+
+<<<
+
+== Agenda Part #1 (~3h).
+
+Unit Objective:: 
+Participants will have a good overview and understanding of all technologies and tools involved and will be proficient in creating a simple presentation.
+
+=== Presentation: introduction 
+* Welcome
+* Agenda & flow
+* Why Asciidoc?
+* What is Asciidoc & Asciidoctor.
+* Overview Tools: Asciidoctor, Visual Studio Code
+* Overview Documentation
+
+=== Common Workshop: QA & Check Installations
+* Installation guide Fedora system
+
+=== Common Workshop: Basic Asciidoc Syntax
+* Interactive, shared quick start and live experiments with key Asciidoc features:
+** Headings
+** Basic formatting
+** Structural elements (blocks, Q&A)
+** Tables
+* Export as HTML & PDF
+
+Unit Outcome:: 
+  Each participant created an Asciidoc document with the above elements and exported to HTML & PDF.
+
+=== Break
+
+=== Lecture: Introduction asciidoctor-revealjs.
+* Principle of operation
+* Technical overview
+* Explanation & structure of the template project
+* Overview of relevant documentation and its interrelations
+
+
+=== Workshop: My first presentation
+* Common start of the tools & a working environment
+* Application of the template
+* Basic writing of a Hello-World presentation
+** Title
+** Slides
+** Basic layout
+
+//== Homework / Exercise
+
+
+== Agenda Part #2 (2~3h).
+
+Unit Objectives:: 
+Participants:will be able to actively use first visual effects and will have received an overview of techniques used for design.
+
+
+=== Q&A from part #1
+
+=== Continuation of design presentation
+* Animations
+* Embedding backgrounds, media, videos
+* Configuration of RevealJS
+
+
+=== Demo/Workshop: Advanced Asciidoc Syntax 
+* Special cases formatting
+* Formatting in tables
+* Embedding of media
+* Attributes, placeholders
+* Splitting documents
+* Styling HTML export; Styling PDF export
+
+//Outcome of the unit:: 
+// All participants have an understanding and overview of the further possibilities and parts of it themselves accompanying tried out.
+
+=== Break
+
+
+=== Demo: Advanced
+* Styling with CSS & designing own CSS classes
+* Printing or PDF export of a presentation
+* Outlook: Pandoc, Word export, ...
+
+=== Q&A & farewell
+
