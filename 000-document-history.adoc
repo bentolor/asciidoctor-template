@@ -1,0 +1,18 @@
+[discrete]
+= Document version history
+
+[cols="1,5a,2,2"]
+|===
+|Rev. |Description |Author |Date
+
+| 0
+| * Initial template draft
+| Benjamin Schmid
+| 2022-12-17
+
+| 1
+| * Aligned file names
+| Benjamin Schmid
+| 2022-12-17
+
+|===

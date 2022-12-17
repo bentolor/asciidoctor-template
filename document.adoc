@@ -1,0 +1,29 @@
+= Writing larger documents: A template
+Firstname Lastname <firstname.lastname@emailprovider.foo>
+1.0, 2022-12-17: Draft revision
+//
+// Adjust settings according to your needs. The `lang`-setting translates inbuilt string
+:doctype: book
+:lang: en
+:toc: macro
+// No default "Chapter X" labels
+:toc-title: Table of Contents
+:toclevels: 2
+:!chapter-signifier:
+:numbered:
+:icons: font
+// Defaults for themeing and image file location
+:stylesheet: theme/theme.css
+:pdf-theme: theme/pdfstyle.yml
+:pdf-fontsdir: theme
+:imagesdir: images
+
+
+// NOTES:
+//   leveloffset=x changes the level of all headlines in the included document
+
+include::000-document-history.adoc[leveloffset=1]
+toc::[]
+include::010-introduction.adoc[leveloffset=1]
+include::020-basic-features.adoc[leveloffset=1]
+

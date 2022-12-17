@@ -1,0 +1,38 @@
+= Introduction
+
+ifndef::imagesdir[]
+:imagesdir: images
+endif::[]
+
+== Objective
+> What is this all about?
+
+The general idea of this repository and template is to provide you with a general wireframe for themed creation of professional looking documents using the Asciidoc markup language and Asciidoctor tooling.
+
+****
+.Features of this template
+* Theme templates for PDF, HTML and Presentation
+* Custom fonts and colors applied
+* Document structure
+* Introduction documentation can be found in `/doc`
+****
+
+.https://pixabay.com/photos/template-writing-typography-school-91490/
+image:template_font_typography_school.jpg[It's templating time,width=50%]
+
+== Major Goals
+
+> What are the major goals of this template
+
+.Goal overview
+[%header, cols="1h,3"]
+|===
+|Goal
+|Description
+
+|Quickstart
+|Provide a low key wireframe to quickly start authoring documents
+
+|Medium advanced
+|Address & demonstrate first advanced features of Asciidoc(tor) usage as part of the generated result as well as in the source file.
+|===
