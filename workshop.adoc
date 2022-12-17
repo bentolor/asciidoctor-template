@@ -1,0 +1,116 @@
+= Asciidoctor Workshop
+:revealjs_customtheme: theme/presentation.css
+:revealjs_parallaxBackgroundImage: media/3rdparty/pexels-scott-webb-2117938.jpg
+:revealjs_parallaxBackgroundSize: 8192px 4863px
+:revealjs_history: true
+
+// For development purposes: This will load a script which automatically reloads the presentation on changes
+[pass]
+++++
+<script src="https://livejs.com/live.js"></script>
+++++
+
+A swift workshop introduction into creating Asciidoc-based PDFs, HTML and RevealJS presentations
+
+[%notitle,background-iframe="https://player.vimeo.com/video/443396800?autoplay=true&background=true"]
+== Welcome
+
+[.columns]
+=== About Me
+
+image:https://avatars.githubusercontent.com/u/588260[@bentolor avatar]
+
+* Benjamin Schmid, @bentolor
+* 25+ years in the software industry
+* Roles: CTO, Division Head, Manager Research & Innovation, ...
+* Regular author & speaker
+* Big fan of lightweight markup formats for documentation:  +
+  _Focus on the content vs. coping with the formatting_
+
+[.columns]
+=== Agenda
+
+.Session #1 (~3h)
+[.column]
+--
+. Introduction (we are here)
+. Checkpoint: Installation
+. Workshop: Basic Asciidoc syntax
+. _Break_
+. Introduction RevealJS
+. Workshop: My first presentation
+--
+
+.Session #2 (2~3h)
+[.column]
+--
+. Q&A from session #1
+. Presentation design
+. Advanced Asciidoc syntax
+. _Break_
+. Advanced topics
+. Q&A & farewell
+--
+
+
+== Tipps on using Visual Studio Code as editor
+
+
+=== Live Preview
+
+=== Code Snippets
+
+Press `[Ctrl]`+`[Space]` and to look up code snippets:
+
+image:media/vscode-snippets.png[Visual Studio Code Snippets]
+
+You can also just type the snippet (i.e. `table` and press `[Tab]` to insert them quickly.
+
+
+
+== Presentation
+
+=== Debugging issues
+
+Use the Browser Tool
+
+
+=== Global scoller background
+
+1. Find and download free very large image as background 
+2. Edit it to reduce the contrast for better legibility
+3. Note down its dimensions and declare it using Asciidoc attributes:
++
+[source,asciidoc]
+--
+:revealjs_parallaxBackgroundImage: media/pexels-scott-webb-2117938.jpg
+:revealjs_parallaxBackgroundSize: 8192px 4863px
+--
+
+
+== Important Resources
+
+
+[.left.small]
+=== Documentation Resources
+
+https://docs.asciidoctor.org/asciidoc/latest/::
+  Your **most important** documentation resource on Asciidoc usage. 
+https://docs.asciidoctor.org/reveal.js-converter/latest/::
+  The Asciidoctor backend plugin: This is the tool converting Asciidoc syntax to RevealJS syntax. Your 2nd most important documentation source to understand how you can do things in a `asciidoctor-revealjs` presentation.
+https://revealjs.com/::
+  The RevealJS HTML presentation framework. The backend for creating the nice HTML presentations.  
+https://github.com/bentolor/asciidoctor-template::
+  The template used in this workshop.
+
+[.left]
+== Media Resources
+
+https://www.pexels.com/videos/::
+  Find free, liberally licensed short videos and pictures, ideally as background videos during section breaks.
+
+https://www.freeimages.com/::
+  Tons of great inspiration and mood pictures with a very liberal license.
+
+
+
