@@ -38,12 +38,12 @@
 
 [source, asciidoc]
 --
-image:media/3rdparty/template_font_typography_school.jpg[A sample image]
+image:media/3rdparty/template.jpg[A sample image]
 --
 
 results in:
 
-image:media/3rdparty/template_font_typography_school.jpg[A sample image]
+image:media/3rdparty/template.jpg[A sample image]
 
 
 
