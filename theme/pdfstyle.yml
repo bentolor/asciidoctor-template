@@ -5,25 +5,53 @@ font:
   catalog:
     merge: true
     Cormorant:
-      normal:      Cormorant_Essentials/TTF/Cormorant-Regular.ttf
-      bold:        Cormorant_Essentials/TTF/Cormorant-Bold.ttf
-      italic:      Cormorant_Essentials/TTF/Cormorant-Italic.ttf
-      bold_italic: Cormorant_Essentials/TTF/Cormorant-BoldItalic.ttf
+      normal:             Cormorant_Essentials/TTF/Cormorant-Regular.ttf
+      bold:               Cormorant_Essentials/TTF/Cormorant-Bold.ttf
+      italic:             Cormorant_Essentials/TTF/Cormorant-Italic.ttf
+      bold_italic:        Cormorant_Essentials/TTF/Cormorant-BoldItalic.ttf
+      light:              Cormorant_Essentials/TTF/Cormorant-Light.ttf
+      light_italic:       Cormorant_Essentials/TTF/Cormorant-LightItalic.ttf
+      medium:             Cormorant_Essentials/TTF/Cormorant-Medium.ttf
+      medium_italic:      Cormorant_Essentials/TTF/Cormorant-MediumItalic.ttf
+      semibold:           Cormorant_Essentials/TTF/Cormorant-SemiBold.ttf
+      semibold_italic:    Cormorant_Essentials/TTF/Cormorant-SemiBoldItalic.ttf
+      sc_normal:          Cormorant_Essentials/TTF/CormorantSC-Regular.ttf
+      sc_bold:            Cormorant_Essentials/TTF/CormorantSC-Bold.ttf
+      sc_light:           Cormorant_Essentials/TTF/CormorantSC-Light.ttf
+      sc_medium:          Cormorant_Essentials/TTF/CormorantSC-Medium.ttf
+      sc_semibold:        Cormorant_Essentials/TTF/CormorantSC-SemiBold.ttf
 
-base_font_family: Cormorant
-base_font_color: '4C5154'    # general gray font
+base:
+  font:
+    family: Cormorant
+    color: '445555'    # general gray font
 base_font_size: 11
-base_font_size_large: $base_font_size * 1.25
-base_font_size_small: $base_font_size * 0.85
+base_font_size_large: $base_font_size * 1.20
+base_font_size_small: $base_font_size * 0.82
 
 heading:
-  align: left
-  font_color: '0022CC'    # Chapter titles
-heading-h1:
-heading-h2:
-heading-h3:
-  font_color: '000000'
-  font_style: normal
+  text_align: left
+  font_color: '0066AA'    # Chapter titles
+  font_style: sc_light
+  h1:
+    font_size: floor($base_font_size * 2.6)
+  h2:
+    font_size: round($base_font_size * 2.0)
+  h3:
+    font_size: round($base_font_size * 1.6)
+    font_style: sc_normal
+  h4:
+    font_size: $base_font_size_large
+    font_color: '000000'
+    font_style: sc_semibold
+  h5:
+    font_color: '000000'
+    font_size: $base_font_size
+    font_style: sc_bold
+  h6: 
+    font_color: '000000'
+    font_size: $base_font_size_small
+    font_style: sc_bold
 
 #header layout
 header:
