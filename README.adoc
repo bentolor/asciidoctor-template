@@ -18,3 +18,11 @@ I'd suggest https://code.visualstudio.com/[Visual Studio Code] as you editor, as
 
 === Clone or checkout this repository
 Just download and unzip or clone this repository to get started.
+
+== Tools
+
+There are several scripts, which ease up your daily operations. In general they restart the rendering on any changes on your `*.adoc`-files.
+
+`render-presentation`:: renders `presentation.adoc` via asciidoctor-revealjs into a HTML presentation, opens the default webbrowser and rerenders the generated artefacts on changes.
+`render-html`:: Same as `render-presentation`, but renders `document.adoc` using plain `asciidoctor` into a file
+`render-pdf`:: Same as `render-html`, but renders the `document.adoc` into a PDF file
