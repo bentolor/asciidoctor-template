@@ -1,0 +1,27 @@
+/*
+ This file contains additional CSS styles in addition to the default themes.
+*/
+
+@import url('../reveal.js/css/theme/blood.css');
+
+/*
+  Custom styles start here
+*/
+
+
+/* Reduce overall font-size */
+.reveal {
+  font-size: 28px;
+}
+
+/* Smaller Title */
+.title h1 {
+  font-size: 2.4em;
+}
+DIV.title { font-weight: bolder; color: rgb(250, 51, 74); }
+
+SECTION .small  {   font-size: 84%; }
+SECTION .xsmall  {   font-size: 72%; }
+
+.reveal .left {     text-align: left; }
+.reveal .left PRE { margin: 20px 0; width: 100%; }
