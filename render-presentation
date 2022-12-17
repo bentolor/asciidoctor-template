@@ -39,6 +39,6 @@ echo "Watching *.adoc for changes & rerun asciidoctor-revealjs"
 echo "\n-=# Use Ctrl-C to abort & stop rendering job, browser & this watcher script! #=- \n"
 inotifywait -m -e close_write *.adoc |
 while read events; do
-  echo "Rendering $SRCFILE using $PROCESSOR expecting $TRGFILE as target file."
+  echo "$(date) Rendering $SRCFILE using $PROCESSOR expecting $TRGFILE as target file."
   $PROCESSOR $SRCFILE
 done
