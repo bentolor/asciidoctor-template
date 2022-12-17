@@ -1,0 +1,20 @@
+= Asciidoctor Template: A featured example for beautiful HTML, PDF and RevealJS Presentation documents
+Benjamin Schmid <@bentolor>
+
+== Getting started
+
+=== Installing prerequisites
+Install _Ruby_, then install the Ruby Gems `asciidoctor`, `asciidoctor-pdf`, `asciidoctor-revealjs`, `asciidoctor-diagram`, `asciidoctor-kroki` and `asciidoctor-chart`.
+
+Check link:doc/workshop-installation.adoc[`doc/workshop-installation.adoc`] for detailed instructions.
+
+=== Editor suggestions
+I'd suggest https://code.visualstudio.com/[Visual Studio Code] as you editor, as it offers several extension supporting Asciidoctor-based authoring. I recommend installing the extensions: 
+
+* _AsciiDoc_ from _asciidoctor_
+* _AsciiDoc Slides_ from _flobilosaurus_
+* _vscode-pdf_ for inline PDF preview
+* _Code Spell Checker_ and optionally additional dictionaries for spell-checking.
+
+=== Clone or checkout this repository
+Just download and unzip or clone this repository to get started.
