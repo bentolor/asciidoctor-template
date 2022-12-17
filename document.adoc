@@ -16,7 +16,6 @@ Firstname Lastname <firstname.lastname@emailprovider.foo>
 :stylesheet: theme/theme.css
 :pdf-theme: theme/pdfstyle.yml
 :pdf-fontsdir: theme
-:imagesdir: media
 
 
 // NOTES:
