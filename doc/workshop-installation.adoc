@@ -1,0 +1,87 @@
+= Asciidoctor Workshop: System Preparation
+Benjamin Schmid
+:pdf-theme: ../theme/pdfstyle.yml
+:pdf-fontsdir: ../theme
+
+This guide assumes that you are running on **Fedora 37 workstation** with latest updates installed. The following steps are operated on the command line. Therefore start the program _Terminal_ to run the commands below. You only need to type in the commands on lines starting with `$ `.
+
+== Installation of Git and Ruby
+
+1. Install the `git` and `ruby` package from the default repository
+[source,bash]
++
+----
+$ sudo dnf install git ruby 
+----
+
+2. Verify the correct installationy
++
+[source,bash]
+----
+$ git --version
+git version 2.38.1
+
+$ gem --version
+3.3.26
+----
+
+== Installation of Asciidoctor packages
+1. Install the Ruby Gems `asciidoctor`, `asciidoctor-pdf`, `asciidoctor-revealjs`, `asciidoctor-diagram`, `asciidoctor-kroki` and `asciidoctor-chart`.
++
+[source,bash]
+----
+$ gem install asciidoctor asciidoctor-pdf asciidoctor-revealjs asciidoctor-diagram asciidoctor-kroki asciidoctor-chart
+Fetching asciidoctor-2.0.18.gem
+Successfully installed asciidoctor-2.0.18
+Parsing documentation for asciidoctor-2.0.18
+Installing ri documentation for asciidoctor-2.0.18
+ …
+xxx gems installed
+----
+
+2. Verify correct installation
++
+[source,bash]
+----
+$ asciidoctor-revealjs --version
+Asciidoctor reveal.js 4.1.0 using Asciidoctor 2.0.18 [https://asciidoctor.org]
+Runtime Environment (ruby 3.1.3p185 (2022-11-24 revision 1a6b16756e) [x86_64-linux]) (lc:UTF-8 fs:UTF-8 in:UTF-8 ex:UTF-8)
+----
+
+== Install Visual Studio Code editor
+
+The installation instructions can be also found at https://code.visualstudio.com/docs/setup/linux
+
+[source,bash]
+----
+$ sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
+
+$ sudo sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/vscode.repo'
+
+$ dnf check-update
+
+$ sudo dnf install code
+----
+
+== Install Visual Studio Code editor extensions
+
+1. Launch the "Visual Studio Code" program
+
+2. Open on the left toolbar the "Extensions" pane (also: _Ctrl+Shift+X_)
+
+3. Type "asciidoc" in the search panel
+
+4. Install _AsciiDoc_ from _asciidoctor_
+
+5. Install _AsciiDoc Slides_ from _flobilosaurus_
+
+6. Optionally: Install _vscode-pdf_
+
+7. Optionally: Install _Code Spell Checker_ and optionally additional dictionaries like _French - Code Spell Checker_.
+
+
+== Optionally: Make yourself acquainted to the editor
+
+The Visual Studio Code editor and extensions will be our main tool during our workshop. We'll use it to craft our documents while also using its live preview capabilities.
+
+Therefore you might want to play & toy a little bit with the editor and how it works.
