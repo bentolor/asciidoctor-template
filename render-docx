@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+#
+# Inital Setup see manual/workshop-installation.adoc
+SRCFILE=${1:-document.adoc}
+TRGFILE=${2:-document.docx}
+PROCESSOR=${3:-asciidoctor}
+
+assert_command() 
+{
+  if ! command -v $1 >/dev/null
+  then
+      echo "$1 could not be found. Please install $2"
+      exit
+  fi
+}
+assert_command "pandoc" "package: pandoc"
+assert_command "$PROCESSOR" "Ruby gem: $PROCESSOR"
+
+echo "Rendering $SRCFILE using $PROCESSOR expecting $TRGFILE as target file."
+$PROCESSOR -b docbook5 $SRCFILE -o - | pandoc -f docbook -t docx -o $TRGFILE
+
+echo "Opening default application for $TRGFILE via xdg-open"
+xdg-open $TRGFILE
