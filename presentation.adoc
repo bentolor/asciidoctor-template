@@ -1,0 +1,253 @@
+= A default presentation
+//:revealjs_theme: blood  -- in case you'd like a default theme
+:revealjs_customtheme: theme/presentation.css
+:revealjs_parallaxBackgroundImage: media/3rdparty/pexels-scott-webb-2117938.jpg
+:revealjs_parallaxBackgroundSize: 8192px 4863px
+// :icons: font
+// :revealjs_customtheme: css/sky.css
+// //:revealjs_autoSlide: 5000
+// :revealjs_history: true
+// :revealjs_fragmentInURL: true
+// //:revealjs_viewDistance: 10
+// :revealjs_fragments: true
+// :revealjs_width: 1408
+// :revealjs_height: 792
+//:revealjs_controls: false
+// :revealjs_controlsLayout: edges
+// :revealjs_controlsTutorial: true
+//:revealjs_slideNumber: c/t
+// :revealjs_showSlideNumber: speaker
+// :revealjs_autoPlayMedia: true
+// :revealjs_defaultTiming: 49
+// //:revealjs_transitionSpeed: fast
+// :revealjs_parallaxBackgroundImage: media/what-s-under-the-hood-1560145-light.jpg
+// :revealjs_parallaxBackgroundSize: 5000px 3376px
+// :customcss: css/presentation.css
+// :source-highlighter: highlightjs
+// :highlightjs-theme: css/atom-one-light.css
+// // we want local served font-awesome fonts
+// :iconfont-remote!:
+// :iconfont-name: fonts/fontawesome/css/all
+
+
+== Basics
+
+== Including Media
+
+=== Images
+
+[source, asciidoc]
+--
+image:media/3rdparty/template_font_typography_school.jpg[A sample image]
+--
+
+results in:
+
+image:media/3rdparty/template_font_typography_school.jpg[A sample image]
+
+
+
+=== Background Images
+
+image::media/3rdparty/pexels-scott-webb-2117938.jpg[background, size=cover]
+
+Apply a full-screen background image via:
+[source, asciidoc]
+--
+image::media/3rdparty/pexels-scott-webb-2117938.jpg[background, size=cover]
+--
+
+
+[background-video="https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_10mb.mp4",options="loop,muted"]
+=== Background Videos
+
+You can also use background videos. Great for fullscreen demo videos, but also as nice teaser
+
+[source, asciidoc]
+--
+[background-video="https://video.de/my.mp4",options="loop,muted"]
+== Your chapter
+--
+
+== PlantUml
+[source, asciidoc]
+--
+[graphviz]
+[plantuml,alice-bob]
+....
+alice -> bob
+....
+--
+
+results in:
+
+[plantuml,alice-bob,svg,role=sequence]
+....
+alice -> bob
+....
+
+=== Graphviz
+
+[source, asciidoc]
+--
+[graphviz]
+....
+digraph foo {
+  node [style=rounded]
+  node1 [shape=box]
+  node2 [fillcolor=yellow, style="rounded,filled", shape=diamond]
+  node3 [shape=record, label="{ a | b | c }"]
+
+  node1 -> node2 -> node3
+}
+....
+--
+
+results in:
+
+[graphviz]
+....
+digraph foo {
+  node [style=rounded]
+  node1 [shape=box]
+  node2 [fillcolor=yellow, style="rounded,filled", shape=diamond]
+  node3 [shape=record, label="{ a | b | c }"]
+
+  node1 -> node2 -> node3
+}
+....
+
+[.columns]
+== Column layout
+
+[.column]
+--
+* **Edgar Allen Poe**
+* Sheri S. Tepper
+* Bill Bryson
+--
+
+[.column]
+--
+Edgar Allan Poe (/poʊ/; born Edgar Poe; Ja
+nuary 19, 1809 – October 7, 1849) was an American writer, editor, and literary critic.
+--
+
+[.columns]
+=== Columns with size
+[.column.is-one-third]
+--
+* **Kotlin**
+* Java
+* Scala
+--
+
+[.column]
+--
+Programming language for Android, mobile cross-platform
+and web development, server-side, native,
+and data science. Open source forever Github.
+--
+
+== Lists
+
+[source, asciidoc]
+--
+* Im
+* a
+* List
+--
+
+results in:
+
+* Im
+* a
+* List
+
+=== Lists
+
+[source, asciidoc]
+--
+. Step 1
+. Step 2
+.. Step 2a
+.. Step 2b
+. Step 3
+--
+
+results in:
+
+. Step 1
+. Step 2
+.. Step 2a
+.. Step 2b
+. Step 3
+
+=== Descriptions
+
+[source, asciidoc]
+--
+first term:: definition of first term
+second term:: definition of second term
+--
+
+results in:
+
+first term:: definition of first term
+second term:: definition of second term
+
+== Source Code
+
+
+[source, asciidoc]
+--
+[source, clojure]
+----
+(def lazy-fib
+  (concat
+   [0 1]
+   ((fn rfib [a b]
+        (lazy-cons (+ a b) (rfib b (+ a b)))) 0 1)))
+----
+--
+
+results in:
+
+[source, clojure]
+----
+(def lazy-fib
+  (concat
+   [0 1]
+   ((fn rfib [a b]
+        (lazy-cons (+ a b) (rfib b (+ a b)))) 0 1)))
+----
+
+== Tables
+
+[source, asciidoc]
+--
+[%header, cols=2*]
+|===
+|Character
+|Seen in
+
+|Donald Duck
+|Mickey Mouse
+|===
+--
+
+results in:
+
+[%header, cols=2*]
+|===
+|Character
+|Seen in
+
+|Donald Duck
+|Mickey Mouse
+|===
+
+== Quotes
+
+[quote, Albert Einstein]
+A person who never made a mistake never tried anything new.
