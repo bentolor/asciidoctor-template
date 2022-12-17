@@ -1,0 +1,44 @@
+#!/usr/bin/env bash
+#
+# Inital Setup see manual/workshop-installation.adoc
+SRCFILE=${1:-presentation.adoc}
+TRGFILE=${2:-presentation.html}
+PROCESSOR=${3:-asciidoctor-revealjs}
+
+assert_command() 
+{
+  if ! command -v $1 >/dev/null
+  then
+      echo "$1 could not be found. Please install $2"
+      exit
+  fi
+}
+assert_command "inotifywait" "package: inotify-tools"
+assert_command "python" "package: python3"
+assert_command "$PROCESSOR" "Ruby gem: $PROCESSOR"
+
+echo "Rendering $SRCFILE using $PROCESSOR expecting $TRGFILE as target file."
+$PROCESSOR $SRCFILE
+
+echo "Starting Webserver on :8000"
+python -m http.server >/dev/null 2>&1 & 
+
+if [[ "$TRGFILE" == *.html ]]; then
+  echo "Opening browser at http://localhost:8000/$TRGFILE"
+  xdg-open http://localhost:8000/$TRGFILE > /dev/null 2>&1 >/dev/null & 
+else
+  echo "Opening default application for $TRGFILE via xdg-open"
+  xdg-open $TRGFILE
+fi
+
+echo "Installing termination trap"
+trap "exit" INT TERM
+trap "kill 0" EXIT
+
+echo "Watching *.adoc for changes & rerun asciidoctor-revealjs"
+echo "\n-=# Use Ctrl-C to abort & stop rendering job, browser & this watcher script! #=- \n"
+inotifywait -m -e close_write *.adoc |
+while read events; do
+  echo "Rendering $SRCFILE using $PROCESSOR expecting $TRGFILE as target file."
+  $PROCESSOR $SRCFILE
+done
