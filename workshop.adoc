@@ -190,6 +190,9 @@ Hello world! This is my _first_ document.
 
 
 == Interactive Demo #1
+{nbsp}
+
+NOTE: See _workshop-interactive-demosession1.adoc_ for transcript
 
 == Recap: Demo #1
 
@@ -333,6 +336,10 @@ image:media/workshop-challenge1.png[Workshop Challenge #1, role=right]
 
 
 == Interactive Demo #2
+{nbsp}
+
+NOTE: See _workshop-interactive-demosession2.adoc_ for transcript
+
 
 == Recap: Demo #2
 
@@ -446,6 +453,94 @@ It can also produce formats like Docbook, LaTeX, EPUB, ...
 
 NOTE: Create PDF & HTML of your Pet Sheet in Visual Studio Code. 
 Repeat on the command-line.
+
+
+
+
+== asciidoctor-revealjs
+
+=== What is RevealJS?
+
+[.step]
+* A _JavaScript library_
+* Allows to create interactive HTML5 presentations
+* Works on HTML Code
+* Has plenty of Features
+* Plugins can extend Functionality +
+  (Source Code Highlighting, Speaker Notes, ...)
+
+
+[%notitle,background-iframe="https://revealjs.com/markup/"]
+=== https://revealjs.com/markup/
+
+
+
+=== What is asciidoctor-revealjs?
+
+[.step]
+* An _Asciidoctor_ backend:
+  It allows to convert AsciiDoc files into HTML 
+  flavoured to work with RevealJS
+* Therefore asciidoctor-revealjs tries to map  
+  the RevealJS features into the AsciiDoc syntax
+
+[.fragment]
+--
+.Example
+[source,html]
+----
+<section data-background-color="aquamarine">
+  <h1>My slide title</h1>
+  <p>My <b>slide</b> content</p>
+</section>
+----
+--
+
+[.fragment]
+--
+is written in _AsciiDoc_ as
+
+[source,asciidoc]
+----
+[background-color="aquamarine"]
+== My slide title
+
+My *slide* content
+----
+--
+
+[background-color="aquamarine"]
+=== My slide title
+
+My *slide* content
+
+
+=== Documentation
+
+TIP: https://docs.asciidoctor.org/reveal.js-converter/latest/
+
+
+[%notitle,background-iframe="https://docs.asciidoctor.org/reveal.js-converter/latest/"]
+=== https://docs.asciidoctor.org/reveal.js-converter/latest/
+
+
+
+[.small]
+=== My first slidedeck
+
+1. Create & save a new `mypresentation.adoc`
+2. Press kbd:[Ctrl+Shift+P], type _slides_ and choose _Show Slides Preview Besides_.
+3. Enter text below. You should see the same.
+
+
+
+[.plain]
+image:media/vscode-check5.png[Slide View]
+
+
+
+
+
 
 
 == Tipps on using Visual Studio Code as editor
