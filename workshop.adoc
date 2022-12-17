@@ -228,7 +228,7 @@ A new paragraph
 
 
 [.columns]
-== Lists
+=== Lists
 
 [column.is-one-third]
 --
@@ -274,7 +274,7 @@ The description can also start on its own line.
 
 
 
-== Images & Videos
+=== Images & Videos
 
 [source,asciidoc]
 ----
@@ -297,6 +297,30 @@ video::https://sample-videos.com/…/big_buck_bunny_360p_10mb.mp4[Big Bunny]
 ----
 
 
+[%notitle.columns]
+== Challenge #1
+
+[column.left]
+--
+.Workshop Challenge
+
+Recreate a document like on the right. 
+It should include:
+
+* A document title 
+* You as an author
+* Header and subheaders
+* An ordered list
+* Some basic formatting
+
+[TIP]
+https://docs.asciidoctor.org/asciidoc/latest/syntax-quick-reference/ might help you to for help.
+--
+
+[column]
+--
+image:media/workshop-challenge1.png[Workshop Challenge #1, role=right, height=600]
+--
 
 
 
