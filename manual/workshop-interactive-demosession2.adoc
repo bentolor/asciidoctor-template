@@ -35,20 +35,64 @@ end
 
 Add `:toc:` to the header. 
 
-== Including files
+=== Basic Table
 
-//include::workshop-interactive-demosession1.adoc[leveloffset=+2]
+.Table Title
+|===
+|Item |Description
+
+|A star | Bright and shiny
+|A planet | Round and blue
+|Galaxy
+|Large and beautful
+|===
+
+* Emtpy line = header
+
+=== Advanced Tables
+
+[%header,cols=">1,^2h,6"]
+|===
+|ID| tables | with explanations
+|1| structured presentation | often important for specifications
+|2| Features | like weight, alignment, ...
+|3 2.2+^.^| or connected cells
+|4 
+|5| My | Style of writing
+|===
+
+
+=== Comments
+
+// A single-line comment
+
+////
+A multi-line comment.
+
+Notice it's a delimited block.
+////
+
+
+=== Icons
+
+Render more beautiful documents by adding `:icons: font` in header
+
+Now you can use icon:image[]. 
+
+Look up icons via https://fontawesome.com/search 
+
+*Important:* check 5.15.4 in the search filter! And even then, not all are working
+
+
 
 
 == Admonitions
 
-Render more beautiful using `:icons: font`
 
 NOTE: An admonition draws the reader's attention to auxiliary information.
 
-Here are the other built-in admonition types:
-
-IMPORTANT: Don't forget the children!
+[IMPORTANT]
+Don't forget the children!
 
 TIP: Look for the warp zone under the bridge.
 
@@ -83,3 +127,19 @@ This is very helpful to apply styling in reveal js!
 An open block can be an anonymous container,
 or it can masquerade as any other block.
 --
+
+
+== Including files
+
+//include::workshop-interactive-demosession1.adoc[leveloffset=+2]
+
+
+You can also include text files, i.e. into blocks
+
+[source,java]
+--
+include::FibCalculator.java[]
+--
+
+
+

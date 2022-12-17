@@ -297,10 +297,18 @@ video::https://sample-videos.com/…/big_buck_bunny_360p_10mb.mp4[Big Bunny]
 ----
 
 
-[%notitle.columns]
+
+
+
 == Challenge #1
 
-[column.left]
+[%notitle,background-iframe="https://docs.asciidoctor.org/asciidoc/latest/syntax-quick-reference/"]
+=== Syntax Quick Reference
+
+
+[%notitle.columns]
+=== Workshop Task
+[column.left.is-half]
 --
 .Workshop Challenge
 
@@ -314,12 +322,12 @@ It should include:
 * Some basic formatting
 
 [TIP]
-https://docs.asciidoctor.org/asciidoc/latest/syntax-quick-reference/ might help you to for help.
+https://docs.asciidoctor.org/asciidoc/latest/syntax-quick-reference/
 --
 
 [column]
 --
-image:media/workshop-challenge1.png[Workshop Challenge #1, role=right, height=600]
+image:media/workshop-challenge1.png[Workshop Challenge #1, role=right]
 --
 
 
@@ -379,30 +387,65 @@ Or Admonitions sections such as NOTE, TIP, IMPORTANT, CAUTION, WARNING.
 --
 
 
+== Challenge #2
+
+[%notitle.columns]
+=== Workshop Task
+[column.left]
+--
+.Workshop Challenge
+
+Update your document:
+
+* Use a table in "Fact Sheet"
+* Add icons
+* Add the Info-Box
+* Add a link to the Wikipedia Page
+
+.Optional:
+* Extract the quote into a separate `quote.txt`
+--
+
+[column]
+--
+image:media/workshop-challenge2.png[Workshop Challenge #2, role=right]
+--
 
 
-[%notitle,background-iframe="https://docs.asciidoctor.org/asciidoc/latest/syntax-quick-reference/"]
-=== Syntax Quick Reference
-
-== Creating Outpu
 
 
-[.left]
-=== Document rendering
 
-.Using tools 
-* HTML:  `asciidoctor talk.adoc` 
-* PDF: `asciidoctor-pdf talk.adoc`
-* Presentations: `asciidoctor-revealjs presentation.adoc`
-* Word DOCX: `asciidoctor -b docbook5 document.adoc -o - | pandoc -f docbook -t docx -o document.docx`
+
+
+== Creating Output
+
+
+=== Document rendering: Using CLI tools
+
+[horizontal]
+HTML::  `asciidoctor talk.adoc` 
+PDF:: `asciidoctor-pdf talk.adoc`
+Slides:: `asciidoctor-revealjs presentation.adoc`
+Word:: `asciidoctor -b docbook5 document.adoc -o - |` +
+       `pandoc -f docbook -t docx -o document.docx`
 
 It can also produce formats like Docbook, LaTeX, EPUB, ...
 
-{nbsp}
 
-.Using viewers
+=== Document rendering: Using Editors & Viewers
+
 * Editor plugins, i.e. Visual Studio Code, IntellIJ, …
 * Browser plugins
+
+.In Visual Studio Code
+1. Press kbd:[Ctrl+Shift+P]
+2. Choose _"AsciiDoc: Save HTML document"_  +
+   or _"AsciiDoc: Export document as PDF"_
+
+{nbsp}
+
+NOTE: Create PDF & HTML of your Pet Sheet in Visual Studio Code. 
+Repeat on the command-line.
 
 
 == Tipps on using Visual Studio Code as editor

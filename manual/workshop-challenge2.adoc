@@ -1,0 +1,42 @@
+= My favourite pet animal
+Your Name <your.email@foo.org>
+:toc:
+:icons: font
+
+== Pet Animal Portrait
+
+=== Fact Sheet
+
+[cols=">1,1,3,2"]
+|===
+| Icon                  | Iconname      | Value | Picture
+
+| icon:paw[]            | paw           |Dog 
+.6+|image:https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Silver_Labrador_Retriever_Cooper.jpg/320px-Silver_Labrador_Retriever_Cooper.jpg[Portrait,role=right]
+
+|icon:tree[]            | tree          |   Canidae
+|icon:tag[]             | tag           |  Labrador Retriever
+|icon:arrows-h[]        | arrows-h      |  1,24m 
+|icon:arrows-v[]        | arrows-v      |  68cm  
+|icon:balance-scale[]   | balance-scale |  24kg  
+|===
+
+
+
+=== What are your top #3 favourite properties?
+
+[NOTE]
+--
+. Highly **social**
+. Very **loyal** and **devote**
+. Can understand up to **250 words**
+--
+
+== About my favourite pet
+For more information check the https://en.wikipedia.org/wiki/Labrador_Retriever[Wikipedia Article on Labrador Retriever].
+
+[quote, Wikipedia]
+____
+include::workshop-challenge2-quote.txt[A Wikipedia Quote]
+____
+
