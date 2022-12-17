@@ -102,7 +102,7 @@ title_page:
 table:
   head:
     font_color: $heading_font_color
-    background_color: 0099CC
+    background_color: eeeeee
 
 page:
   layout: portrait
