@@ -542,6 +542,20 @@ image:media/vscode-check5.png[Slide View]
 
 
 
+== Interactive Demo #3
+{nbsp}
+
+NOTE: See _workshop-interactive-demosession3.adoc_ for transcript
+
+
+=== Homework
+1. Create your presentation using tool
+2. Play around and bring questions for the next session.
+
+
+== End of Session #1
+
+
 
 == Tipps on using Visual Studio Code as editor
 
