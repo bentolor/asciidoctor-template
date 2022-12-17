@@ -7,11 +7,11 @@ This guide assumes that you are running on **Fedora 37 workstation** with latest
 
 == Installation of Git and Ruby
 
-1. Install the `git` and `ruby` package from the default repository
+1. Install the `git`, `inotify-tools` and `ruby` package from the default repository
 [source,bash]
 +
 ----
-$ sudo dnf install git ruby 
+$ sudo dnf install git ruby inotify-tools
 ----
 
 2. Verify the correct installationy
