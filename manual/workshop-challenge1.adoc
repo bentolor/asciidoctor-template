@@ -1,0 +1,28 @@
+= My favourite pet animal
+Your Name <your.email@foo.org>
+
+== Pet Animal Portrait
+
+=== Fact Sheet
+
+image:https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Silver_Labrador_Retriever_Cooper.jpg/320px-Silver_Labrador_Retriever_Cooper.jpg[Portrait,role=right]
+
+[horizontal]
+Species:: Dog
+Family::	Canidae
+Breed:: Labrador Retriever
+Length:: 1,24m
+Height:: 68cm
+Weight:: 24kg
+
+
+=== What are your top #3 favourite properties?
+. Highly **social**
+. Very **loyal** and **devote**
+. Can understand up to **250 words**
+
+
+== About my favourite pet
+The Labrador Retriever or simply Labrador is a British breed of retriever gun dog. It is among the most commonly kept dogs in several countries, particularly in the Western world.
+
+The Labrador is friendly, energetic, and playful. It was bred as a sporting and hunting dog but is widely kept as a companion dog. It may also be trained as a guide or assistance dog, or for rescue or therapy work.
