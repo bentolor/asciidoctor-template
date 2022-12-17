@@ -1,0 +1,85 @@
+= Advanced AsciiDoc features
+Author Name <author@email.org>
+v2.0, 2019-03-22
+:toc:
+:fonts: icon
+:myattribute: myvalue
+:toc:
+:toclevels: 4
+:source-highlighter: highlight.js
+:icons: font
+
+This is the preamble Text. 
+
+== Links
+
+Simple Weblinks can be written like https://asciidoctor.org[Asciidoctor].
+
+You can link to other documents link:../document.adoc[template document].
+
+== Source code block
+
+[source,ruby,linenums]
+----
+require 'sinatra'   <1>
+
+get '/hi' do        <2>
+  "Hello World!"
+end
+----
+<1> Explain a line
+<2> Explain another line
+
+
+== Automatic TOC
+
+Add `:toc:` to the header. 
+
+== Including files
+
+//include::workshop-interactive-demosession1.adoc[leveloffset=+2]
+
+
+== Admonitions
+
+Render more beautiful using `:icons: font`
+
+NOTE: An admonition draws the reader's attention to auxiliary information.
+
+Here are the other built-in admonition types:
+
+IMPORTANT: Don't forget the children!
+
+TIP: Look for the warp zone under the bridge.
+
+CAUTION: Slippery when wet.
+
+WARNING: The software you're about to use is untested.
+
+IMPORTANT: Sign off before stepping away from your computer.
+
+
+== More Blocks
+
+.A sidebar
+****
+Sidebar
+****
+
+.Quote
+[quote,Abraham Lincoln,Cemetery at Gettysburg]
+____
+Four score and seven years ago our fathers brought forth
+on this continent a new nation...
+____
+
+
+.Plain block
+
+This is very helpful to apply styling in reveal js!
+
+[.mycssclass]
+--
+An open block can be an anonymous container,
+or it can masquerade as any other block.
+--
