@@ -1,0 +1,101 @@
+= My first presentation
+:icons: font
+:source-highlighter: highlightjs
+:highlightjs-languages: yaml, asciidoc
+
+== Slide #1
+
+=== Slide #1.1 
+This slide is reached by scrolling down.
+
+
+=== AsciiDoc
+
+We can use _regular_ AsciiDoc **formatting**.
+
+[cols=">1,2"]
+|===
+|Table | do work
+
+|Row 1.1 | Row 1.2
+|Row 2.1 | Row 2.2
+|===
+
+
+
+== Advanced Asciidoc
+
+
+=== Amonitions & Icons
+
+If you declare the `:icons: font`, then…
+
+Icons work icon:paw[] as well as…
+
+WARNING: Admonitions with icons in it
+
+
+=== Source Code
+
+Add the attributes below
+
+[source,asciidoc]
+--
+= Presentation Title
+// [...] other document attributes
+:source-highlighter: highlightjs
+:highlightjs-languages: yaml, asciidoc
+--
+
+to get code highlighting in code blocks
+[source,asciidoc]
+--
+[source,java]
+----
+public class MyClass { }
+----
+--
+
+== General Layout
+
+[.stretch.left]
+=== Stretch & Left-align
+* Assign custom CSS class via Via `[.X]`  to a block or a slide.
+* Assign multiple via `[.X.Y]`
+* `.stretch` will grow slied to available space
+* `.left` makes content text left-aligned
+* 
+[source,asciidoc]
+----
+[.stretch.left]
+=== Stretch & Lef-align a slide
+----
+
+
+
+[.columns]
+=== Columns layout
+
+[.column.is-one-third]
+--
+* _Dog_
+* Cat
+* *Bird*
+--
+
+[.column]
+--
+Choose your favourite pet out of the list on the left side.
+--
+
+// More classess see https://docs.asciidoctor.org/reveal.js-converter/latest/converter/syntax/layout/
+
+
+
+=== Themes
+
+Set via `:revealjs_theme:`
+
+List see RevealJS documentation: https://revealjs.com/themes/
+
+
