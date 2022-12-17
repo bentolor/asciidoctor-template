@@ -1,7 +1,7 @@
 = Introduction
 
 ifndef::imagesdir[]
-:imagesdir: images
+:imagesdir: media
 endif::[]
 
 == Objective
