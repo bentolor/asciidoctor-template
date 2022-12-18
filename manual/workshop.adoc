@@ -1,6 +1,8 @@
 = Asciidoc(tor) Workshop
-:revealjs_customtheme: theme/presentation.css
-:revealjs_parallaxBackgroundImage: media/3rdparty/pexels-scott-webb-2117938.jpg
+:base_dir: ../
+:revealjsdir: ../reveal.js
+:revealjs_customtheme: ../theme/presentation.css
+:revealjs_parallaxBackgroundImage: ../media/3rdparty/pexels-scott-webb-2117938.jpg
 :revealjs_parallaxBackgroundSize: 8192px 4863px
 :revealjs_history: true
 :revealjs_fragmentInURL: true
