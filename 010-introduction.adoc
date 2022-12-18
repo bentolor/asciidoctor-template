@@ -14,7 +14,7 @@ The general idea of this repository and template is to provide you with a genera
 ****
 
 .https://pixabay.com/photos/template-writing-typography-school-91490/
-image:../media/3rdparty/template.jpg[It's templating time,width=50%]
+image:media/3rdparty/template.jpg[It's templating time,width=50%]
 
 == Major Goals
 
