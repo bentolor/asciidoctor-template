@@ -1,253 +1,291 @@
 = A default presentation
-//:revealjs_theme: blood  -- in case you'd like a default theme
+Firstname Lastname <f.lastname@foo.bar>
+1.0, 2022-12-17: Initial template revision
+//
+:icons: font
+:source-highlighter: highlightjs
+:highlightjs-languages: yaml, asciidoc
 :revealjs_customtheme: theme/presentation.css
 :revealjs_parallaxBackgroundImage: media/3rdparty/pexels-scott-webb-2117938.jpg
 :revealjs_parallaxBackgroundSize: 8192px 4863px
-// :icons: font
-// :revealjs_customtheme: css/sky.css
-// //:revealjs_autoSlide: 5000
-// :revealjs_history: true
-// :revealjs_fragmentInURL: true
-// //:revealjs_viewDistance: 10
-// :revealjs_fragments: true
-// :revealjs_width: 1408
-// :revealjs_height: 792
+:revealjs_history: true
+:revealjs_fragments: true
+:revealjs_fragmentInURL: true
+:revealjs_slideNumber: c/t
+//:revealjs_autoSlide: 5000
 //:revealjs_controls: false
-// :revealjs_controlsLayout: edges
-// :revealjs_controlsTutorial: true
-//:revealjs_slideNumber: c/t
-// :revealjs_showSlideNumber: speaker
-// :revealjs_autoPlayMedia: true
-// :revealjs_defaultTiming: 49
-// //:revealjs_transitionSpeed: fast
-// :revealjs_parallaxBackgroundImage: media/what-s-under-the-hood-1560145-light.jpg
-// :revealjs_parallaxBackgroundSize: 5000px 3376px
-// :customcss: css/presentation.css
-// :source-highlighter: highlightjs
-// :highlightjs-theme: css/atom-one-light.css
-// // we want local served font-awesome fonts
-// :iconfont-remote!:
-// :iconfont-name: fonts/fontawesome/css/all
+//:revealjs_transitionSpeed: fast
+// More see https://docs.asciidoctor.org/reveal.js-converter/latest/converter/revealjs-options/
+
+// For development purposes: This script will automatically reloads the presentation on changes
+++++
+<script src="https://livejs.com/live.js"></script>
+++++
+
+
 
 
 == Basics
 
-== Including Media
+=== Slide #1.1 
+This slide is reached by scrolling down.
 
-=== Images
 
-[source, asciidoc]
+=== Slide support AsciiDoc content
+You can use _regular_ AsciiDoc **formatting**.
+
+[cols=">1,2"]
+|===
+|Table | do work
+
+|Row 1.1 | Row 1.2
+|Row 2.1 | Row 2.2
+|===
+
+
+
+=== Definition lists
+[.col2]
+.Classic Layout
+Car:: a vehicle
+Cat:: an animal
+
+[horizontal.col2]
+.Horizontal Layout
+Car:: a vehicle
+Cat:: an animal
+
+
+
+=== Amonitions & Icons
+If you declare the `:icons: font`, then…
+
+Icons work icon:paw[] as well as…
+
+WARNING: Admonitions with icons in it.
+
+
+=== Source Code
+[source,java,linenums,highlight=14..14]
+----
+include::manual/FibCalculator.java[A fibonnaci calulator,lines=33..49]
+----
+
+
+== Images & video
+.A block image
+image::../media/3rdparty/template.jpg[A image label, width=10%]
+
+// No image decoration
+[.plain.tgap.bgap]
+image::../media/3rdparty/template.jpg[A image label, width=10%]
+
+.Vimeo / Youtube Video
+video::153425222[vimeo,options=autoplay]
+
+
+
+== General Layout
+
+[.stretch.left]
+=== Stretch & Left-align
+* Assign custom CSS class via Via `[.X]`  to a block or a slide.
+* Assign multiple via `[.X.Y]`
+* `.stretch` will grow slied to available space
+* `.left` makes content text left-aligned
+* 
+[source,asciidoc]
+----
+[.stretch.left]
+=== Stretch & Lef-align a slide
+----
+
+[.dragtop.right]
+=== Force something on the top
+
+[.dragbottom]
+=== Force something on the bottom
+
+
+
+[.columns]
+=== asciidoctor-revealjs columns layout
+
+[.column.is-one-third.is-vcentered]
 --
-image:media/3rdparty/template.jpg[A sample image]
+* _Dog_
+* Cat
 --
 
-results in:
+[.column.has-text-left]
+--
+asciidoctor-revealjs comes with a built-in column mechanic.
 
-image:media/3rdparty/template.jpg[A sample image]
+Please refer to the https://docs.asciidoctor.org/reveal.js-converter/latest/converter/syntax/layout/[official documentation] to learn on the available classes
+--
 
 
 
+=== Template 2-column layout classes
+The template layout classes allow mixing of column layouts in a single slide. You can start column layout in the middle of the slide …
+
+[.col2]
+--
+image::../media/3rdparty/template.jpg[]
+--
+[.col2]
+--
+image::../media/3rdparty/template.jpg[]
+--
+[.clear]
+--
+…and continue thereafter.
+--
+
+
+=== Template 3-column layout classes
+The 3-column layout are a little more tricky. 
+
+[.col3-l]
+--
+image::../media/3rdparty/template.jpg[]
+--
+[.col3-cr.left]
+--
+You have one for each column: `.col3-l` (left), `.col3-c` (center) and `.col3-r` (right).
+
+Besides that `.col3-lc` (left-center) and `.col3-cr` (center-right) allow to declare 2/3rds columns.
+--
+
+[.col3-lc.tgapxs]
+--
+You can create nice, alterating layouts +
+using those classes.
+--
+[.col3-r.tgapxs]
+--
+[.plain]
+image::../media/3rdparty/template.jpg[Image,width=50%]
+--
+
+
+
+=== Theming
+
+You can use a default theme be commenting out `:revealjs_customtheme:` and setting a inbuilt themename, i.e. `:revealjs_theme: blood`.
+
+For full list of themes see RevealJS documentation: https://revealjs.com/themes/
+
+NOTE: Please read the `theme/presentation.css` to understand the custom theme approach here. Infos on the additional CSS styles by this template can be found below and/or in the CSS file.
+
+
+
+
+[.left]
+=== Spacing
+You can force empty lines by…
+
+{nbsp}
+
+between lines: `pass:[{nbsp}]` is an invisible, non-empty whitespace character.
+
+
+[.tgap.bgap]
+Altenatively apply the custom `.tgap`/`.bgap` style for top/bottom gap.  +
+Works on images, tables, paragraphs, etc.
+
+This is down because above has  `.bgap` assigned.
+
+
+
+=== Decent hints
+
+This is something [.decent]#a decent hint#. +
+The contrary of a _eye catcher_.
+
+[.decent.small]
+Something you want to add only a very small hint. Maybe with a https://www.google.com[Website link].
+
+
+
+== Backgrounds
+
+[background-color="blue"]
+=== A solid background color
+Everything is so blue here?!
+
+
+[.dragbottom.right]
 === Background Images
-
-image::media/3rdparty/pexels-scott-webb-2117938.jpg[background, size=cover]
-
-Apply a full-screen background image via:
-[source, asciidoc]
---
-image::media/3rdparty/pexels-scott-webb-2117938.jpg[background, size=cover]
---
+image::https://upload.wikimedia.org/wikipedia/commons/9/90/Labrador_Retriever_portrait.jpg[background]
 
 
-[background-video="https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_10mb.mp4",options="loop,muted"]
+[%notitle]
+=== Background Images w/o title
+image::https://upload.wikimedia.org/wikipedia/commons/9/90/Labrador_Retriever_portrait.jpg[background]
+
+
+[.dragtop.right,background-video="https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_10mb.mp4",options="loop,muted"]
 === Background Videos
 
-You can also use background videos. Great for fullscreen demo videos, but also as nice teaser
+[%notitle]
+[background-iframe="https://docs.asciidoctor.org/reveal.js-converter/latest/converter/syntax/background/"]
+=== A background website
 
-[source, asciidoc]
+
+
+
+== Animation
+
+=== List animation steps
+[.step]
+. First statement
+. Second statement
+. Another, important statement
+. The final conclusion
+
+
+
+=== Element animation steps
+[step=2]
+Then take the second step.
+
+[step=1]
+Start with the first step.
+
+[WARNING.fade-up.tgap,step=3]
+Watch out with the last step!
+
+
+[transition="zoom"]
+=== Slide transitions
+
+[transition="zoom"]
+=== Tunnel effect
+
+[transition="none", background-color="black"]
+=== No effect
+
+[transition="fade-out", background-color="black"]
+=== Helpful on transitioning images…
+
+[transition="fade-in", background-color="black"]
+=== …producing a slide-show like image
+
+
+== Speaker notes
+
+You can create speaker notes for your slides.
+During presentation, press the `S`-key to open your speaker note biew
+
+[.notes]
 --
-[background-video="https://video.de/my.mp4",options="loop,muted"]
-== Your chapter
---
+.Notes for your speaker view
 
-== PlantUml
-[source, asciidoc]
---
-[graphviz]
-[plantuml,alice-bob]
-....
-alice -> bob
-....
---
-
-results in:
-
-[plantuml,alice-bob,svg,role=sequence]
-....
-alice -> bob
-....
-
-=== Graphviz
-
-[source, asciidoc]
---
-[graphviz]
-....
-digraph foo {
-  node [style=rounded]
-  node1 [shape=box]
-  node2 [fillcolor=yellow, style="rounded,filled", shape=diamond]
-  node3 [shape=record, label="{ a | b | c }"]
-
-  node1 -> node2 -> node3
-}
-....
---
-
-results in:
-
-[graphviz]
-....
-digraph foo {
-  node [style=rounded]
-  node1 [shape=box]
-  node2 [fillcolor=yellow, style="rounded,filled", shape=diamond]
-  node3 [shape=record, label="{ a | b | c }"]
-
-  node1 -> node2 -> node3
-}
-....
-
-[.columns]
-== Column layout
-
-[.column]
---
-* **Edgar Allen Poe**
-* Sheri S. Tepper
-* Bill Bryson
+* talking point #1
+* talking point #2
+* talking point #3
 --
 
-[.column]
---
-Edgar Allan Poe (/poʊ/; born Edgar Poe; Ja
-nuary 19, 1809 – October 7, 1849) was an American writer, editor, and literary critic.
---
 
-[.columns]
-=== Columns with size
-[.column.is-one-third]
---
-* **Kotlin**
-* Java
-* Scala
---
-
-[.column]
---
-Programming language for Android, mobile cross-platform
-and web development, server-side, native,
-and data science. Open source forever Github.
---
-
-== Lists
-
-[source, asciidoc]
---
-* Im
-* a
-* List
---
-
-results in:
-
-* Im
-* a
-* List
-
-=== Lists
-
-[source, asciidoc]
---
-. Step 1
-. Step 2
-.. Step 2a
-.. Step 2b
-. Step 3
---
-
-results in:
-
-. Step 1
-. Step 2
-.. Step 2a
-.. Step 2b
-. Step 3
-
-=== Descriptions
-
-[source, asciidoc]
---
-first term:: definition of first term
-second term:: definition of second term
---
-
-results in:
-
-first term:: definition of first term
-second term:: definition of second term
-
-== Source Code
-
-
-[source, asciidoc]
---
-[source, clojure]
-----
-(def lazy-fib
-  (concat
-   [0 1]
-   ((fn rfib [a b]
-        (lazy-cons (+ a b) (rfib b (+ a b)))) 0 1)))
-----
---
-
-results in:
-
-[source, clojure]
-----
-(def lazy-fib
-  (concat
-   [0 1]
-   ((fn rfib [a b]
-        (lazy-cons (+ a b) (rfib b (+ a b)))) 0 1)))
-----
-
-== Tables
-
-[source, asciidoc]
---
-[%header, cols=2*]
-|===
-|Character
-|Seen in
-
-|Donald Duck
-|Mickey Mouse
-|===
---
-
-results in:
-
-[%header, cols=2*]
-|===
-|Character
-|Seen in
-
-|Donald Duck
-|Mickey Mouse
-|===
-
-== Quotes
-
-[quote, Albert Einstein]
-A person who never made a mistake never tried anything new.
+== The End!
