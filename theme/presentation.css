@@ -1,13 +1,10 @@
 /*
  This file contains additional CSS styles in addition to the default themes.
 */
-
 @import url('../reveal.js/css/theme/league.css');
 
 
-/*
---- General styles, applied document-wide ------------
-*/
+/* --- General styles, applied document-wide ------------ */
 
 /* Reduce overall font-size */
 .reveal { font-size: 30px; }
@@ -33,19 +30,31 @@ DIV.title { font-weight: bolder; color: #13DAEC; }
  }
 
 /* Table header cells */
-.reveal TH {
-    background-color: rgb(19, 218, 236, .25);
-}
+.reveal TH { background-color: rgb(19, 218, 236, .25); }
+/* Odd horizontal definitons:: list */
+.reveal td.hdlist1, td.hdlist2 { vertical-align: middle; }
 
-/*
---- On demand styles applied -------------------------
-*/
+
+
+
+
+/* --- On demand styles applied ------------------------- */
+/* Smaller slides content */
 section .small .slide-content  {   font-size: 84%; }
-section .xsmall .slide-content {   font-size: 72%; }
+section .small .slide-content P { margin: 8px 0; }
+section .xsmall .slide-content  {   font-size: 72%; }
+section .xsmall .slide-content P { margin: 2px 0; }
 section .xxsmall .slide-content {   font-size: 64%; }
+section .xxsmall .slide-content P { margin: 0; }
+
+/* Pull slide-content left */
 .reveal .left { text-align: left; }
 .reveal .left PRE { margin: 20px 0; width: 100%; }
+.reveal .right { text-align: right; }
 
+/* Make things more decent */
+.reveal .decent, .reveal .decent * { color: #ffffff70; }
+.decent A { text-decoration: underline; }
 
 /* Plain Images w/o border & drop-shadow */
 .reveal img.plain, .reveal .plain img {
@@ -57,3 +66,26 @@ section .xxsmall .slide-content {   font-size: 64%; }
 /* Top & bottom gaps */
 .tgap {  margin-top: 2.4em  }
 .bgap {  margin-bottom: 2.4em }
+.tgapxs {  margin-top: 1em  }
+.bgapxs {  margin-bottom: 1em }
+
+
+/* ---- Column layouting ------------------------------- */
+.col2 {
+  width:46% !important;
+  margin: 0 1% !important;
+  float:left;
+}
+/* Don't center lists in columns. Looks odd. */
+.reveal .col2 ol, .reveal .col2  dl, .reveal .col2  ul { display:table; }
+.float-left {   float:left; }
+.reveal .clear {   clear: both; }
+/* poor-mans 3col layout */
+.col3-l { float: left; width: 33% }
+.col3-lc { float: left; width: 66% }
+.col3-c { width: 33%; display: inline-block; }
+.col3-cr { float: right; width: 66% }
+.col3-r { float: right; width: 33% }
+
+section.dragbottom {   top: 600px !important; }
+section.dragtop {   top: 0px !important; }

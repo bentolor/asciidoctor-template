@@ -556,13 +556,71 @@ NOTE: See _workshop-interactive-demosession3.adoc_ for transcript
 == End of Session #1
 
 
+== Welcome to Session #2
+
+=== Questions?
+
+== Use the template project
+
+.Clone the Project
+[source,bash]
+----
+$ git clone https://github.com/bentolor/asciidoctor-template.git
+$ cd asciidoctor-template
+----
+
+.Start Visual Code in this project
+
+[source,bash]
+----
+$ code .
+----
+Select "Yes, I trust the authors".
+
+[.small]
+=== Understanding the template structure
+[cols=">1m,4"]
+|===
+| /manual/   | Contains the workshop materials
+| /media/    | Put your images & videos here
+| /reveal.js | RevealJS distribution 3.9.2
+| /theme/    | Prepared theme files for PDF, HTML and Slides
+| /render-*  | Scripts to render html, pdf, docx and presentation
+| /presentation.adoc | A template presentation
+| /document.adoc | A template document
+|===
+
+
+=== Run the renderes
+
+TIP: Try out all `render-x` scripts and open the generated files.
 
 == Tipps on using Visual Studio Code as editor
 
 
-=== Live Preview
+[.columns.small]
+== Advanced Usage
 
-=== Code Snippets
+[.column]
+--
+.Starting from this section on, you should engineer your presentation by:
+
+1. Starting the `render-presentation` script
+2. Using the Browser to inspect your result
+3. Stop rendering by pressing kbd:[Strg+C]
+--
+
+[.column.is-one-third]
+--
+WARNING: We'll start to used advanced features no longer supported by the inline AsciiDoc slide Preview. +
+--
+
+
+
+
+== Practical Tips
+
+=== VSCode: Code Snippets
 
 Press `[Ctrl]`+`[Space]` and to look up code snippets:
 
@@ -572,14 +630,7 @@ You can also just type the snippet (i.e. `table` and press `[Tab]` to insert the
 
 
 
-== Presentation
-
-=== Debugging issues
-
-Use the Browser Tool
-
-
-=== Global scroller background
+=== How to find background images
 
 1. Find and download free very large image as background 
 2. Edit it to reduce the contrast for better legibility
@@ -592,10 +643,6 @@ Use the Browser Tool
 --
 
 
-
-
-
-== Practical Styling Tips
 
 === Spacing
 
@@ -620,29 +667,92 @@ Works on images, tables, paragraphs, etc.
 --
 
 
-=== Assigning CSS styles
 
-.At blocks
-xxx
 
-.At slides
-xx
+=== Applying CSS styles/classes
+
+.On blocks
+[source,asciidoc]
+----
+[.class1.class2]
+--
+A invisible block
+--
+----
+
+.On slides
+[source,asciidoc]
+----
+[.class1.class2]
+== A slide section
+----
 
 .At images
-xxx
+[source,asciidoc]
+----
+[.class1.class2]
+image::image.jpg[an image]
+----
+
+.At a single paragraph / line / list entry
+[source,asciidoc]
+----
+* A list entry
+* Another entry  <!-- .element: class="decent"  -->
+----
+
+
 
 [.xsmall]
 === Some of my template CSS classes
-[cols="1m,3"]
+[cols=">1m,^1,3"]
 |===
-|CSS class  |effect
+|CSS class  | Applied | Description
 
-|.plain     | Image: Render  without decorations
-|.left      | Slide: Left-align all text
-|.stretch   | Slide: Use all available space
+|.plain     | Image   | Render  without decorations
+|.left      | Slide   | Left-align all text
+|.stretch   | Slide   | Use all available space
+|.small     | Slide   | Render slide content smaller. Also `.xsmall` & `.xxsmall` available.
+|.tgap      | Content | Render top gap. `.tgapxs` is a smaller variant
+|.bgap      | Content | Render bottom gap. `.bgapxs` is a smaller variant
+|.decent    | Text    | Make text decent gray.
+|.col2      | Block   | A floating column. `.clear`-Blocks start a new line.
+|.dragtop   | Slide   | Drag slide content/title to the top.
+|.dragbottom| Slide   | Drag slide content/title to the bottom.
 |===
 
 
+
+
+== Interactive Demo #4
+{nbsp}
+
+NOTE: See _presentation.adoc_ for transcript
+
+
+
+
+
+
+
+=== Debugging layout issues
+
+If you stumble over issues, use the Browser inspection tools to understand the situation.
+
+Most issues can be solved by creating a custom CSS rule or creating a new CSS class and assigning that to something.
+
+
+
+=== Printing
+
+RevealJS offers https://github.com/hakimel/reveal.js/blob/v3.9/README.md#pdf-export[a method to create PDFs using Chrome browser and appending `?print-pdf.`]. Please try.
+
+Personally I have had very mixed results and resorted into mass-screenshoting my presentation and converting the `*.png` files into a single PDF like
+
+[source,bash]
+--
+$ convert -quality 90 -compress jpeg screenshot*.png presentation.pdf 
+--
 
 
 == Important Resources
@@ -663,7 +773,7 @@ https://github.com/bentolor/asciidoctor-template::
 
 
 [.left]
-== Media Resources
+=== Media Resources
 
 https://www.pexels.com/videos/::
   Find free, liberally licensed short videos and pictures, ideally as background videos during section breaks.
