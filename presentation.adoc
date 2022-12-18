@@ -68,7 +68,7 @@ WARNING: Admonitions with icons in it.
 === Source Code
 [source,java,linenums,highlight=14..14]
 ----
-include::manual/FibCalculator.java[A fibonnaci calulator,lines=33..49]
+include::workshop/FibCalculator.java[A fibonnaci calulator,lines=33..49]
 ----
 
 

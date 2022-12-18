@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #
-# Inital Setup see manual/workshop-installation.adoc
+# Inital Setup see workshop/workshop-installation.adoc
 SRCFILE=${1:-document.adoc}
 TRGFILE=${2:-document.docx}
 PROCESSOR=${3:-asciidoctor}

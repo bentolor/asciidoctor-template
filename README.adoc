@@ -6,7 +6,7 @@ Benjamin Schmid <@bentolor>
 === Installing prerequisites
 Install _Ruby_, then install the Ruby Gems `asciidoctor`, `asciidoctor-pdf`, `asciidoctor-revealjs`, `asciidoctor-diagram`, `asciidoctor-kroki` and `asciidoctor-chart`.
 
-Check link:manual/workshop-installation.adoc[`manual/workshop-installation.adoc`] for detailed instructions.
+Check link:workshop/workshop-installation.adoc[`workshop/workshop-installation.adoc`] for detailed instructions.
 
 === Editor suggestions
 I'd suggest https://code.visualstudio.com/[Visual Studio Code] as you editor, as it offers several extension supporting Asciidoctor-based authoring. I recommend installing the extensions: 
