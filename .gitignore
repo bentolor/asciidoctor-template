@@ -1,4 +1,4 @@
 *.pdf
 *.html
 *.docx
-/tmp
+!/workshop/workshop.html
