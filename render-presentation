@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #
-# Inital Setup see manual/workshop-installation.adoc
+# Inital Setup see workshop/workshop-installation.adoc
 SRCFILE=${1:-presentation.adoc}
 TRGFILE=${2:-presentation.html}
 PROCESSOR=${3:-asciidoctor-revealjs}

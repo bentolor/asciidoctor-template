@@ -583,7 +583,7 @@ Select "Yes, I trust the authors".
 === Understanding the template structure
 [cols=">1m,4"]
 |===
-| /manual/   | Contains the workshop materials
+| /workshop/   | Contains the workshop materials
 | /media/    | Put your images & videos here
 | /reveal.js | RevealJS distribution 3.9.2
 | /theme/    | Prepared theme files for PDF, HTML and Slides
