@@ -6,6 +6,8 @@ Benjamin Schmid <@bentolor>
 === Installing prerequisites
 Install _Ruby_, then install the Ruby Gems `asciidoctor`, `asciidoctor-pdf`, `asciidoctor-revealjs`, `asciidoctor-diagram`, `asciidoctor-kroki` and `asciidoctor-chart`.
 
+To use the script, also install `inotify-tools` and `pandoc`.
+
 Check link:workshop/workshop-installation.adoc[`workshop/workshop-installation.adoc`] for detailed instructions.
 
 === Editor suggestions
@@ -19,10 +21,28 @@ I'd suggest https://code.visualstudio.com/[Visual Studio Code] as you editor, as
 === Clone or checkout this repository
 Just download and unzip or clone this repository to get started.
 
-== Tools
+
+=== Template documents
+
+There are two template documents in this repository
+
+`presentation.adoc`:: This is a template for an asciidoctor-revealjs based presentation. It assumes in-depth knowledge of the Asciidoctor methods, which are descripted int the workshop materials. This template relies on `themes/presentation.css` as a styling template.
+`document.adoc`:: This is a small template file for a potentially large document. This template relies on `themes/document.css` as a styling template for web/HTML and `themes/pdfstyle.yml` for PDF generation.
+
+
+=== Render scripts
 
 There are several scripts, which ease up your daily operations. In general they restart the rendering on any changes on your `*.adoc`-files.
 
 `render-presentation`:: renders `presentation.adoc` via asciidoctor-revealjs into a HTML presentation, opens the default webbrowser and rerenders the generated artefacts on changes.
 `render-html`:: Same as `render-presentation`, but renders `document.adoc` using plain `asciidoctor` into a file
 `render-pdf`:: Same as `render-html`, but renders the `document.adoc` into a PDF file
+
+
+== Documentation 
+
+=== Workshop
+In the `workshop/` folder you find a extensive workshop presentation with accompanying live demos transcripts. 
+
+=== Template files
+The template files `presentation.adoc` and `document.adoc` also act as some sort of documentation. 
