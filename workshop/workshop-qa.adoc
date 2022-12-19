@@ -1,0 +1,36 @@
+= Workshop Q & A
+Benjamin Schmid
+:icons: font
+:pdf-fontsdir: ../theme
+:pdf-theme: ../theme/pdfstyle.yml
+
+[qanda]
+Where do I find the predefined builtins roles like `.big` or `.red`:: 
+
+See https://docs.asciidoctor.org/asciidoc/latest/text/text-span-built-in-roles/#built-in-roles-for-text[Built-in roles for text], but they are no longer encouraged!
++
+WARNING: _There are several built-in roles that were once supported in AsciiDoc, but have since been deprecated. These roles include big, small, named colors (e.g., aqua), and named background colors (e.g., aqua-background)._
++
+So the general recommendation is to create *custom roles*. To become visible, you then must add and apply additional styling to the HTML output via https://docs.asciidoctor.org/asciidoctor/latest/html-backend/custom-stylesheet/[custom CSS styles & classes] and/or https://docs.asciidoctor.org/pdf-converter/latest/roles/[PDF output style].
+
+
+
+How can I translate the predefined labels, i.e. "Table of Content"?:: 
+
+*Option #1*: Download the https://github.com/asciidoctor/asciidoctor/tree/v2.0.x/data/locale[appropriate file from Asciidoctor] and include it in your document
++
+*Option #2:* Just use this template project and adjust the `:lang: en` line. It does this already.
++
+_Explanation:_ Each label is a individual See this section https://docs.asciidoctor.org/asciidoctor/latest/localization-support/[in the user guide]: You can override the individual labels via attributes. Fortunately, the Asciidoctor project has already pretranslated string available.
+
+
+Can I refer and include remote Asciidoc content in my Asciidoc file?:: 
+
+Generally yes: See the documentation for `include::` at https://docs.asciidoctor.org/asciidoc/latest/directives/include-uri/[Reference include content by URI].
++
+To make this work you need to pass `allow-uri-read`, i.e. `asciidoctor-pdf -a allow-uri-read document.adoc` and similar.
+
+
+I don't see remote content in my Visual Studio Code Live Preview::
+
+This is for security reasons and due to an outstanding implementation support. 
