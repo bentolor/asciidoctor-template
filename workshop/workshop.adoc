@@ -63,24 +63,20 @@ image:https://avatars.githubusercontent.com/u/588260[@bentolor avatar,margin=20p
 .Session #1 (~3h)
 [.column]
 --
-. Introduction & Overview
 . Overview: Asciidoc(tor) & Tools
 . Checkpoint: Installation
-. Workshop: Writing AsciiDoc documents
-. _Break_
-. Overview RevealJS
-. Workshop: My first presentation
+. _Workshop:_ Writing AsciiDoc documents
+. Overview: RevealJS
+. _Workshop:_ Dissecting presentation template
 --
 
 .Session #2 (2~3h)
 [.column]
 --
 . Q&A
-. Presentation design
-. Advanced Asciidoc syntax
-. _Break_
-. Advanced topics
-. Q&A & farewell
+. Project Template
+. Practical hints
+. _Workshop:_ Dissecting the Presentation Template
 --
 
 
@@ -804,3 +800,6 @@ https://www.freeimages.com/::
 {nbsp}
 
 NOTE: See _presentation.adoc_ for transcript
+
+[%notitle,background-iframe="https://player.vimeo.com/video/538516215?autoplay=true&background=true"]
+== Thank you!
