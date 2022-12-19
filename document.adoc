@@ -4,7 +4,6 @@ Firstname Lastname <firstname.lastname@emailprovider.foo>
 //
 // Adjust settings according to your needs. The `lang`-setting translates inbuilt string
 :doctype: book
-:lang: en
 :toc: macro
 // No default "Chapter X" labels
 :toc-title: Table of Contents
@@ -16,6 +15,9 @@ Firstname Lastname <firstname.lastname@emailprovider.foo>
 :stylesheet: theme/theme.css
 :pdf-theme: theme/pdfstyle.yml
 :pdf-fontsdir: theme
+// Adjust this to get translated labels
+:lang: en
+include::locale/attributes.adoc[]
 
 
 // NOTES:
