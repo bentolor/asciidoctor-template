@@ -152,6 +152,17 @@ Launch "Visual Studio Code". Open the left toolbar click on "Extensions" (also: 
 Assert you find at least the four installed extensions
 
 
+[.xsmall]
+=== Adjust Asciidoctor plugin settings
+
+[.plain]
+image:media/vscode-check1.png[Adjust plugin settings,width=80%]
+
+1. Open menu:File[Preferences > Settings] (or: kbd:[Ctrl+,]).
+2. Type _"asciidoc"_
+3. Click & *check* the _Asciidoc: _Use_asciidoctorpdf_ checkbox.
+
+
 
 === Create a new document
 Press kbd:[Ctrl+N] and save the file via kbd:[Ctrl+S] as `playground.adoc`.
