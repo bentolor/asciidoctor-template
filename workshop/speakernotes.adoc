@@ -1,5 +1,9 @@
 = Speaker tipps
 
+== How to edit this?
+
+In the upper directory run `./render-presentation workshop/workshop.adoc workshop/workshop.html`
+
 == Frameless presenting in a Windows
 * Use Google Chrome
 * Install https://chrome.google.com/webstore/detail/framelessapp-ext/peoodjkcnljekllfedckepfejklfomed/related?hl=de["Frameless App" extension]
