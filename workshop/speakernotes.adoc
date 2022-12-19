@@ -1,0 +1,13 @@
+= Speaker tipps
+
+== Frameless presenting in a Windows
+* Use Google Chrome
+* Install https://chrome.google.com/webstore/detail/framelessapp-ext/peoodjkcnljekllfedckepfejklfomed/related?hl=de["Frameless App" extension]
+* Show in Frameless Window
+
+.Optional for Linux: Resize & Hide Window border
+----
+$ bash
+$ xprop -id $(xdotool search --onlyvisible --name Workshop) -f _MOTIF_WM_HINTS 32c -set _MOTIF_WM_HINTS "0x2, 0x0, 0x0, 0x0, 0x0"
+$ xdotool windowsize $(xdotool search --onlyvisible --name Workshop) 1280 720
+----
