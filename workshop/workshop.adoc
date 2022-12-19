@@ -6,11 +6,12 @@
 :revealjs_parallaxBackgroundSize: 8192px 4863px
 :revealjs_history: true
 :revealjs_fragmentInURL: true
+:revealjs_preloadIframes: true
 :source-highlighter: highlight.js
 :highlightjs-languages: yaml, asciidoc
 :icons: font
 :experimental:
-
+:title-slide-background-iframe: https://player.vimeo.com/video/443396800?autoplay=true&background=true
 A swift workshop introduction into creating beautifil Asciidoc-based PDFs, HTML and RevealJS presentations
 
 
@@ -20,8 +21,8 @@ A swift workshop introduction into creating beautifil Asciidoc-based PDFs, HTML 
 <script src="https://livejs.com/live.js"></script>
 ++++
 
-[%notitle,background-iframe="https://player.vimeo.com/video/443396800?autoplay=true&background=true"]
-== Welcome
+[background-iframe="https://player.vimeo.com/video/422390260?autoplay=true&background=true"]
+== The workshop
 
 [.columns]
 === About Me
@@ -83,7 +84,7 @@ image:https://avatars.githubusercontent.com/u/588260[@bentolor avatar,margin=20p
 --
 
 
-
+[background-iframe="https://player.vimeo.com/video/426999613?autoplay=true&background=true"]
 == Overview
 
 [.left]
@@ -135,6 +136,7 @@ image:media/basic-html.png[width=40%] image:media/basic-pdf.png[width=40%]
 
 
 
+[background-iframe="https://player.vimeo.com/video/567147347?autoplay=true&background=true"]
 == Checkpoint: Installation
 
 === Assert CLI tool availability
@@ -202,11 +204,13 @@ Hello world! This is my _first_ document.
 --
 
 
+[background-iframe="https://player.vimeo.com/video/351743902?autoplay=true&background=true"]
 == Interactive Demo #1
 {nbsp}
 
 NOTE: See _workshop-interactive-demosession1.adoc_ for transcript
 
+[background-iframe="https://player.vimeo.com/video/517727327?autoplay=true&background=true"]
 == Recap: Demo #1
 
 === Structuring
@@ -315,7 +319,7 @@ video::https://sample-videos.com/…/big_buck_bunny_360p_10mb.mp4[Big Bunny]
 
 
 
-
+[background-iframe="https://player.vimeo.com/video/539165984?autoplay=true&background=true"]
 == Challenge #1
 
 [%notitle,background-iframe="https://docs.asciidoctor.org/asciidoc/latest/syntax-quick-reference/"]
@@ -347,13 +351,13 @@ image:media/workshop-challenge1.png[Workshop Challenge #1, role=right]
 --
 
 
-
+[background-iframe="https://player.vimeo.com/video/351743902?autoplay=true&background=true"]
 == Interactive Demo #2
 {nbsp}
 
 NOTE: See _workshop-interactive-demosession2.adoc_ for transcript
 
-
+[background-iframe="https://player.vimeo.com/video/517727327?autoplay=true&background=true"]
 == Recap: Demo #2
 
 === Tables → Source
@@ -406,7 +410,7 @@ They can easily be applied like this:
 Or Admonitions sections such as NOTE, TIP, IMPORTANT, CAUTION, WARNING. 
 --
 
-
+[background-iframe="https://player.vimeo.com/video/539165984?autoplay=true&background=true"]
 == Challenge #2
 
 [%notitle.columns]
@@ -435,8 +439,7 @@ image:media/workshop-challenge2.png[Workshop Challenge #2, role=right]
 
 
 
-
-
+[background-iframe="https://player.vimeo.com/video/206340009?autoplay=true&background=true"]
 == Creating Output
 
 
@@ -469,7 +472,7 @@ Repeat on the command-line.
 
 
 
-
+[background-iframe="https://player.vimeo.com/video/311143098?autoplay=true&background=true"]
 == asciidoctor-revealjs
 
 === What is RevealJS?
@@ -554,7 +557,7 @@ image:media/vscode-check5.png[Slide View]
 
 
 
-
+[background-iframe="https://player.vimeo.com/video/351743902?autoplay=true&background=true"]
 == Interactive Demo #3
 {nbsp}
 
@@ -566,14 +569,16 @@ NOTE: See _workshop-interactive-demosession3.adoc_ for transcript
 2. Play around and bring questions for the next session.
 
 
+[background-iframe="https://player.vimeo.com/video/514790160?autoplay=true&background=true"]
 == End of Session #1
 
 
+[background-iframe="https://player.vimeo.com/video/458958006?autoplay=true&background=true"]
 == Welcome to Session #2
 
 === Questions?
 
-== Use the template project
+=== Using the template project
 
 .Clone the Project
 [source,bash]
@@ -604,15 +609,8 @@ Select "Yes, I trust the authors".
 |===
 
 
-=== Run the renderes
-
-TIP: Try out all `render-x` scripts and open the generated files.
-
-== Tipps on using Visual Studio Code as editor
-
-
 [.columns.small]
-== Advanced Usage
+=== Entering the next level
 
 [.column]
 --
@@ -630,8 +628,11 @@ WARNING: We'll start to used advanced features no longer supported by the inline
 
 
 
+=== Run the renderes
 
-== Practical Tips
+TIP: Try out all `render-x` scripts and open the generated files.
+
+
 
 === VSCode: Code Snippets
 
@@ -642,6 +643,8 @@ image:media/vscode-snippets.png[Visual Studio Code Snippets]
 You can also just type the snippet (i.e. `table` and press `[Tab]` to insert them quickly.
 
 
+[background-iframe="https://player.vimeo.com/video/615225526?autoplay=true&background=true"]
+== Practical Hints
 
 === How to find background images
 
@@ -737,15 +740,6 @@ image::image.jpg[an image]
 
 
 
-== Interactive Demo #4
-{nbsp}
-
-NOTE: See _presentation.adoc_ for transcript
-
-
-
-
-
 
 
 === Debugging layout issues
@@ -756,7 +750,7 @@ Most issues can be solved by creating a custom CSS rule or creating a new CSS cl
 
 
 
-=== Printing
+=== PDF Generation
 
 RevealJS offers https://github.com/hakimel/reveal.js/blob/v3.9/README.md#pdf-export[a method to create PDFs using Chrome browser and appending `?print-pdf.`]. Please try.
 
@@ -768,7 +762,16 @@ $ convert -quality 90 -compress jpeg screenshot*.png presentation.pdf
 --
 
 
-== Important Resources
+=== Printing
+
+Just try to create a regular HTML or PDF document out of your presentation!
+
+Give it a try with `workshop/workshop.adoc`!
+
+
+
+[background-iframe="https://player.vimeo.com/video/185192145?autoplay=true&background=true"]
+== Resources
 
 
 [.left.small]
@@ -796,3 +799,8 @@ https://www.freeimages.com/::
 
 
 
+[background-iframe="https://player.vimeo.com/video/351743902?autoplay=true&background=true"]
+== Interactive Demo #4
+{nbsp}
+
+NOTE: See _presentation.adoc_ for transcript
