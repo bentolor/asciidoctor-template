@@ -66,14 +66,14 @@ image:https://avatars.githubusercontent.com/u/588260[@bentolor avatar,margin=20p
 . Overview: Asciidoc(tor) & Tools
 . Checkpoint: Installation
 . _Workshop:_ Writing AsciiDoc documents
-. Overview: RevealJS
-. _Workshop:_ Dissecting presentation template
+. _Teader:_ My first presentation
 --
 
 .Session #2 (2~3h)
 [.column]
 --
 . Q&A
+. Overview: RevealJS
 . Project Template
 . Practical hints
 . _Workshop:_ Dissecting the Presentation Template
@@ -467,6 +467,103 @@ NOTE: Create PDF & HTML of your Pet Sheet in Visual Studio Code.
 Repeat on the command-line.
 
 
+[.small]
+=== My first slidedeck
+
+1. Create & save a new `mypresentation.adoc`
+2. Press kbd:[Ctrl+Shift+P], type _slides_ and choose _Show Slides Preview Besides_.
+3. Enter text below. You should see the same.
+
+[.plain]
+image:media/vscode-check5.png[Slide View]
+
+
+=== Homework
+1. Create your presentation using tool
+2. Play around and bring questions for the next session.
+
+
+
+[background-iframe="https://player.vimeo.com/video/351743902?autoplay=true&background=true"]
+== Interactive Demo #3
+{nbsp}
+
+NOTE: See _workshop-interactive-demosession3.adoc_ for transcript
+
+
+[background-iframe="https://player.vimeo.com/video/514790160?autoplay=true&background=true"]
+== End of Session #1
+
+
+
+
+
+
+[background-iframe="https://player.vimeo.com/video/458958006?autoplay=true&background=true"]
+== Welcome to Session #2
+
+=== Questions?
+
+=== Key takeaways of Session #1
+
+[%step]
+* _Tool Setup_: Live editing with VS Code
+* _Structuring_ and basic _formatting_ with Asciidoc
+* Mastering advanced _Table Layouts_
+* Generating output via CLI Tools
+
+=== Do you remember?
+
+[%step]
+* *_Line breaks_* using `{nbsp}+` and *_whitespace_* using `\{nbsp}`
+* Assigning *_roles_* to [.underline]#blocks# `[.role]`  or [.underline]#inline# `[.role]\#xxx#`
+* *_Table header_* options: `[%header,cols=">1h,^2m,6e"]`
+* *_Table cell_* options: `2.3+| Cell`
+* *_Commenting_* using `//` or `////` for comment blocks
+* Using *_font icons_* `\icon:image[]` and `CAUTION:`
+* The *_block types_*: `--`, `----`, `****` and  `\____`
+* *_Including files_* via `include::file.adoc[lines=3..10]`
+
+
+[.columns]
+=== Things we missed
+
+[.column]
+--
+.Continue/stay within blocks via `+`
+[source,asciidoc]
+----
+* A list entry
+* Another list entry
++
+.A header
+Still part of the list.
++
+|===
+|Cell 1 |Cell 2
+|Cell 1 |Cell 2
+|===
+----
+--
+
+[.column]
+--
+* A list entry
+* Another list entry
++
+.A header
+Still part of the list.
++
+|===
+|Cell 1 |Cell 2
+|Cell 1 |Cell 2
+|===
+--
+
+
+
+
+
 
 [background-iframe="https://player.vimeo.com/video/311143098?autoplay=true&background=true"]
 == asciidoctor-revealjs
@@ -537,42 +634,8 @@ TIP: https://docs.asciidoctor.org/reveal.js-converter/latest/
 
 
 
-[.small]
-=== My first slidedeck
-
-1. Create & save a new `mypresentation.adoc`
-2. Press kbd:[Ctrl+Shift+P], type _slides_ and choose _Show Slides Preview Besides_.
-3. Enter text below. You should see the same.
-
-
-
-[.plain]
-image:media/vscode-check5.png[Slide View]
-
-
-
-
-
-[background-iframe="https://player.vimeo.com/video/351743902?autoplay=true&background=true"]
-== Interactive Demo #3
-{nbsp}
-
-NOTE: See _workshop-interactive-demosession3.adoc_ for transcript
-
-
-=== Homework
-1. Create your presentation using tool
-2. Play around and bring questions for the next session.
-
-
-[background-iframe="https://player.vimeo.com/video/514790160?autoplay=true&background=true"]
-== End of Session #1
-
-
-[background-iframe="https://player.vimeo.com/video/458958006?autoplay=true&background=true"]
-== Welcome to Session #2
-
-=== Questions?
+[background-iframe="https://player.vimeo.com/video/394806364?autoplay=true&background=true"]
+== The template project
 
 === Using the template project
 
@@ -680,7 +743,7 @@ Works on images, tables, paragraphs, etc.
 
 
 
-
+[.left]
 === Applying CSS styles/classes
 
 .On blocks
@@ -706,11 +769,10 @@ A invisible block
 image::image.jpg[an image]
 ----
 
-.At a single paragraph / line / list entry
+.Inline style
 [source,asciidoc]
 ----
-* A list entry
-* Another entry  <!-- .element: class="decent"  -->
+* A [.decent]#decent# list entry
 ----
 
 
