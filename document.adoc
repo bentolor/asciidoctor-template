@@ -2,12 +2,10 @@
 Firstname Lastname <firstname.lastname@emailprovider.foo>
 1.0, 2022-12-17: Draft revision
 //
-// Adjust settings according to your needs. The `lang`-setting translates inbuilt string
 :doctype: book
 :toc: macro
+:toclevels: 3
 // No default "Chapter X" labels
-:toc-title: Table of Contents
-:toclevels: 2
 :!chapter-signifier:
 :numbered:
 :icons: font
@@ -15,7 +13,7 @@ Firstname Lastname <firstname.lastname@emailprovider.foo>
 :stylesheet: theme/theme.css
 :pdf-theme: theme/pdfstyle.yml
 :pdf-fontsdir: theme
-// Adjust this to get translated labels
+// Adjust settings according to your needs. The `lang`-setting translates inbuilt string
 :lang: en
 include::locale/attributes.adoc[]
 
