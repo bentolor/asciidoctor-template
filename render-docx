@@ -17,7 +17,7 @@ assert_command "pandoc" "package: pandoc"
 assert_command "$PROCESSOR" "Ruby gem: $PROCESSOR"
 
 echo "Rendering $SRCFILE using $PROCESSOR expecting $TRGFILE as target file."
-$PROCESSOR -b docbook5 $SRCFILE -o - | pandoc -f docbook -t docx -o $TRGFILE
+$PROCESSOR -a allow-uri-read -b docbook5 $SRCFILE -o - | pandoc -f docbook -t docx -o $TRGFILE
 
 echo "Opening default application for $TRGFILE via xdg-open"
 xdg-open $TRGFILE
