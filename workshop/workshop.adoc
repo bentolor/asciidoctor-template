@@ -12,14 +12,13 @@
 :icons: font
 :experimental:
 :title-slide-background-iframe: https://player.vimeo.com/video/443396800?autoplay=true&background=true
-A swift workshop introduction into creating beautifil Asciidoc-based PDFs, HTML and RevealJS presentations
+A swift workshop introduction into creating beautifil Asciidoc-based PDFs, HTML and RevealJS presentations. ©2022 Benjamin Schmid, @bentolor
 
+////
+This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International 
+License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/4.0/.
+////
 
-// For development purposes: This will load a script which automatically reloads the presentation on changes
-[pass]
-++++
-<script src="https://livejs.com/live.js"></script>
-++++
 
 [background-iframe="https://player.vimeo.com/video/422390260?autoplay=true&background=true"]
 == The workshop
