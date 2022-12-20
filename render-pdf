@@ -1,3 +1,9 @@
 #!/usr/bin/env bash
 #
-./render-presentation document.adoc document.pdf asciidoctor-pdf 
+if [ $# -eq 2 ]
+  then
+    ./render-presentation $1 $2 asciidoctor-pdf 
+  else
+    ./render-presentation document.adoc document.pdf asciidoctor-pdf 
+fi
+
