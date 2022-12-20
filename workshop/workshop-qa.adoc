@@ -3,6 +3,7 @@ Benjamin Schmid
 :icons: font
 :pdf-fontsdir: ../theme
 :pdf-theme: ../theme/pdfstyle.yml
+:stylesheet: ../theme/theme.css
 
 [qanda]
 Where do I find the predefined builtins roles like `.big` or `.red`:: 
