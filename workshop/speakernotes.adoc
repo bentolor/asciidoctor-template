@@ -12,6 +12,6 @@ In the upper directory run `./render-presentation workshop/workshop.adoc worksho
 .Optional for Linux: Resize & Hide Window border
 ----
 $ bash
-$ xprop -id $(xdotool search --onlyvisible --name Workshop) -f _MOTIF_WM_HINTS 32c -set _MOTIF_WM_HINTS "0x2, 0x0, 0x0, 0x0, 0x0"
-$ xdotool windowsize $(xdotool search --onlyvisible --name Workshop) 1280 720
+$ xprop -id $(xdotool search --onlyvisible --name 'Asciidoc(tor)') -f _MOTIF_WM_HINTS 32c -set _MOTIF_WM_HINTS "0x2, 0x0, 0x0, 0x0, 0x0"
+$ xdotool windowsize $(xdotool search --onlyvisible --name 'Asciidoc(tor)') 1280 720
 ----
