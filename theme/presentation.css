@@ -34,7 +34,9 @@ DIV.title { font-weight: bolder; color: #13DAEC; }
 /* Odd horizontal definitons:: list */
 .reveal td.hdlist1, td.hdlist2 { vertical-align: middle; }
 
-
+/* Missing default role (probably more missing!) */
+.underline { text-decoration: underline; }
+.line-through { text-decoration: line-through; }
 
 
 
