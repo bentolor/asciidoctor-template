@@ -36,7 +36,7 @@ trap "exit" INT TERM
 trap "kill 0" EXIT
 
 echo "Watching *.adoc for changes & rerun asciidoctor-revealjs"
-echo "\n-=# Use Ctrl-C to abort & stop rendering job, browser & this watcher script! #=- \n"
+echo -e "\n-=# Use Ctrl-C to abort & stop rendering job, browser & this watcher script! #=- \n"
 inotifywait -m -e close_write *.adoc $SRCFILE |
 while read events; do
   echo "$(date) Rendering $SRCFILE using $PROCESSOR expecting $TRGFILE as target file."
